@@ -23,7 +23,7 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.main {
+.sign-up {
     width: 100%;
     margin-top: 80px;
     display: flex;
@@ -84,7 +84,7 @@ button{
     font-weight: bolder;
     cursor: pointer;
 }
-button:focus{
+button:active{
     background-color: green;
 }
 
@@ -93,7 +93,7 @@ button:focus{
         height: 60px;
         font-size: 2.2rem;
     }
-    .main{
+    .sign-up{
         margin-top: 60px;
         padding: 20px;
     }
