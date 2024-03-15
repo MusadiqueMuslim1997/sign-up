@@ -88,3 +88,16 @@ button:focus{
     background-color: green;
 }
 
+@media screen and (max-width:450px){
+    header{
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .main{
+        margin-top: 60px;
+        padding: 20px;
+    }
+    form{
+        padding: 40px 20px;
+    }
+}
