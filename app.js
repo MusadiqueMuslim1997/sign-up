@@ -10,8 +10,7 @@ function sign() {
     var ln = document.getElementById("ln").value;
     var em = document.getElementById("em").value;
     if (password == repeat && password != "" && repeat != "" && fn != "" && ln != "" && em != "") {
-        signUp.style.display = "none";
-        signIn.style.display = "flex";
+       window.location.assign("login.html");
     }
     else if (password == "" || repeat == "" || fn == "" || ln == "" || em == "") {
         alert("Please Fill Input")
