@@ -30,6 +30,20 @@ function sign() {
 }
 
 
+function login(){
+    var loginEmail = document.getElementById("loginemail").value;
+    var loginPassword = document.getElementById("loginpassword").value;
+    var password = document.getElementById("password").value;
+    var em = document.getElementById("em").value;
+  if(em == loginEmail && password == loginPassword){
+    window.location.assign("courses.html");
+  }
+  else{
+    alert("Invalid email and password")
+  }
+
+}
+
 var quetionList = [
 
     {
@@ -352,4 +366,4 @@ function key() {
     courselist7.style.display = "none";
     courselist8.style.display = "none";
     courselist9.style.display = "none";
-}
+}                                                                       
