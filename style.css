@@ -19,8 +19,11 @@ header {
     font-size: 2.5rem;
     text-shadow: 2px 2px silver;
     font-weight: bolder;
-    color: purple;
+    color: darkblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a{
+    text-decoration: none;
 }
 
 .sign-up {
@@ -30,7 +33,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background-color: purple;
+   
     /* display: none; */
 }
 
@@ -67,8 +70,8 @@ input{
     color: black;
 }
 input:focus{
-    border: 2px solid purple;
-    outline: purple;
+    border: 2px solid darkblue;
+    outline: darkblue;
     
 }
 button{
@@ -80,7 +83,7 @@ button{
     justify-content: center;
     text-align: center;
     border-radius: 5px;
-    background-color: purple;
+    background-color: darkblue;
     font-size: 1rem;
     color: white;
     font-weight: bolder;
@@ -100,10 +103,29 @@ button:active{
         align-items: center;
         justify-content: center;
         padding: 40px;
-        background-color: purple;
+      
         /* display: none; */
     
 }
+.btn1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.blue{
+    background-color: darkblue;
+}
+
 @media screen and (max-width:450px){
     header{
         height: 60px;
