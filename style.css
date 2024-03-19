@@ -20,7 +20,7 @@
     text-shadow: 2px 2px silver;
     font-weight: bolder;
     color: darkblue;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 a{
     text-decoration: none;
@@ -50,7 +50,7 @@ a{
     flex-wrap: wrap;
     gap: 20px;
     border: 2px solid darkblue;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
 
