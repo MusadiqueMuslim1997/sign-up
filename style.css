@@ -10,8 +10,8 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+   
+    padding: 20px 60px;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -132,15 +132,16 @@ button:active{
 }
 
 @media screen and (max-width:450px){
-    header{
+    .header{
         height: 60px;
         font-size: 2.2rem;
+        padding-left:30PX ;
     }
     .sign-up{
         margin-top: 60px;
-        padding: 20px;
+        padding: 20px 30px;
     }
-    form{
+    .form{
         padding: 40px 20px;
     }
 }
