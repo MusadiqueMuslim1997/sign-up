@@ -13,15 +13,18 @@ var signUp = document.getElementById("signup");
 var signIn = document.getElementById("signin");
 
 function sign() {
+    var em = document.getElementById("em").value;
     var password = document.getElementById("password").value;
     var repeat = document.getElementById("repeat").value;
     var fn = document.getElementById("fn").value;
-   
-    var em = document.getElementById("em").value;
-    if (password == repeat && password != "" && repeat != "" && fn != "" &&  em != "") {
-       window.location.assign("login.html");
+    localStorage.setItem("email", em);
+    localStorage.setItem("password", password)
+
+
+    if (password == repeat && password != "" && repeat != "" && fn != "" && em != "") {
+        window.location.assign("login.html");
     }
-    else if (password == "" || repeat == "" || fn == ""  || em == "") {
+    else if (password == "" || repeat == "" || fn == "" || em == "") {
         alert("Please Fill Input")
     }
     else if (password != repeat) {
@@ -30,17 +33,22 @@ function sign() {
 }
 
 
-function login(){
+function login() {
     var loginEmail = document.getElementById("loginemail").value;
     var loginPassword = document.getElementById("loginpassword").value;
     var password = document.getElementById("password").value;
     var em = document.getElementById("em").value;
-  if(em == loginEmail && password == loginPassword){
-    window.location.assign("courses.html");
-  }
-  else{
-    alert("Invalid email and password")
-  }
+    
+   
+  if (loginEmail == "" || loginPassword == "") {
+        alert("Please fill input")
+    }
+    // else if (em == loginEmail && password == loginPassword) {
+    //     window.location.assign("courses.html");
+    // }
+    // else {
+    //     alert("Invalid email and password")
+    // }
 
 }
 
