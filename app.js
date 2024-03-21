@@ -17,40 +17,32 @@ function sign() {
     var password = document.getElementById("password").value;
     var repeat = document.getElementById("repeat").value;
     var fn = document.getElementById("fn").value;
-    localStorage.setItem("email", em);
-    localStorage.setItem("password", password)
 
-
-    if (password == repeat && password != "" && repeat != "" && fn != "" && em != "") {
+    if (password === repeat && password !== "" && repeat !== "" && fn !== "" && em !== "") {
+       
+        localStorage.setItem("user", JSON.stringify({ email: em, password: password }));
         window.location.assign("login.html");
-    }
-    else if (password == "" || repeat == "" || fn == "" || em == "") {
-        alert("Please Fill Input")
-    }
-    else if (password != repeat) {
-        alert("Your repeat password is wrong")
+    } else if(password != repeat){
+       alert("Your repeat password is wrong")
+    } 
+    else{
+        alert("Please Fill Input");
     }
 }
-
 
 function login() {
-    var loginEmail = document.getElementById("loginemail").value;
-    var loginPassword = document.getElementById("loginpassword").value;
-    var password = document.getElementById("password").value;
-    var em = document.getElementById("em").value;
-    
-   
-  if (loginEmail == "" || loginPassword == "") {
-        alert("Please fill input")
-    }
-    // else if (em == loginEmail && password == loginPassword) {
-    //     window.location.assign("courses.html");
-    // }
-    // else {
-    //     alert("Invalid email and password")
-    // }
+    var loginEmail = document.getElementById("login-mail").value;
+    var loginPassword = document.getElementById("login-password").value;
 
+   
+    var userData = JSON.parse(localStorage.getItem("user"));
+    if (userData && userData.email === loginEmail && userData.password === loginPassword) {
+        window.location.assign("cards.html");
+    } else {
+        alert("Invalid candidiate");
+    }
 }
+
 
 var quetionList = [
 
