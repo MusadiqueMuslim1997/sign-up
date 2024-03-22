@@ -23,10 +23,10 @@ function sign() {
         localStorage.setItem("user", JSON.stringify({ email: em, password: password }));
         window.location.assign("login.html");
     } else if(password != repeat){
-       alert("Your repeat password is wrong")
+        swal("Password not match");
     } 
     else{
-        alert("Please Fill Input");
+        swal("Please Fill Input");
     }
 }
 
@@ -37,9 +37,11 @@ function login() {
    
     var userData = JSON.parse(localStorage.getItem("user"));
     if (userData && userData.email === loginEmail && userData.password === loginPassword) {
+       
         window.location.assign("cards.html");
+        
     } else {
-        alert("Invalid candidiate");
+        swal("Invalid Candidate");
     }
 }
 
@@ -348,10 +350,10 @@ function startquiz() {
         keySec.style.display = "none";
     }
     else if (pass.value == "") {
-        alert("Enter test key 123")
+        swal("Enter test key 123");
     }
     else {
-        alert("Invalid key please enter 123")
+        swal("Invalid key please enter 123")
     }
 }
 
