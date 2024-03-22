@@ -203,10 +203,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #63b3d8;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 20px;
-    border-radius: 10px;
+  
     flex-wrap: wrap;
 }
 
@@ -268,7 +268,7 @@ header {
 }
 button{
     height: 30px;
-    border: 1px solid #63b3d8;
+    border: 1px solid #4196b8;
     cursor: pointer;
     color: white;
     font-size: 1rem;
