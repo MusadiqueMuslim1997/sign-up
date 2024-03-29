@@ -50,28 +50,31 @@ var htmlQuiz = [
 
     {
         que: '1. Who is making the Web standards?',
-        opt1: 'GOOGLE',
-        opt2: 'MICROSOFT',
-        opt3: 'MOZILLA', opt4: 'WORLD WIDE WEB',
-        ans: 'WORLD WIDE WEB'
+        opt1: 'Google',
+        opt2: 'Microsoft',
+        opt3: 'Mozilla',
+        opt4: 'World Wide Web',
+        ans: 'World Wide Web'
     },
 
     {
         que: '2. What is the abbreviation of HTML',
-        opt1: 'HYPER TEXT MARKUP LANGUAGE',
-        opt2: 'HYPER INFO MARKUP LANGUAGE',
-        opt3: 'HYPER TEND MARK LANGUAGE', opt4: 'HYPER TEST MARKS LANGUAGE',
-        ans: 'HYPER TEXT MARKUP LANGUAGE'
+        opt1: 'Hyper Text Markup Language',
+        opt2: 'Hyper Info Markup Language',
+        opt3: 'Hyper Tend Markup Language',
+        opt4: 'Hyper Test Markup Language',
+        ans: 'Hyper Text Markup Language'
     }
     ,
 
 
     {
         que: '3. Choose the correct HTML element to define important text',
-        opt1: 'STRONG',
-        opt2: 'I', opt3: 'B',
-        opt4: 'IMPORTANT',
-        ans: 'IMPORTANT'
+        opt1: 'Strong',
+        opt2: 'I',
+        opt3: 'B',
+        opt4: 'Important',
+        ans: 'Important'
     },
 
 ]
