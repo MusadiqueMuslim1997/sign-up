@@ -46,154 +46,131 @@ function login() {
 }
 
 
-var quetionList = [
+var htmlQuiz = [
 
-    {
+    { que: 'Who is making the Web standards?    ', opt1: 'GOOGLE', opt2: 'MICROSOFT', opt3: 'MOZILLA', opt4: 'WORLD WIDE WEB', ans: 'WORLD WIDE WEB' },
 
-        que: "1. The external JavaScript file must contain the <script> tag.",
-        a: "True",
-        b: "False",
-        c: "Both of the above",
-        d: "None of the above",
-        ans: "false"
-    }
+    { que: 'What is the abbreviation of HTML', opt1: 'HYPER TEXT MARKUP LANGUAGE', opt2: 'HYPER INFO MARKUP LANGUAGE', opt3: 'HYPER TEND MARK LANGUAGE', opt4: 'HYPER TEST MARKS LANGUAGE', ans: 'HYPER TEXT MARKUP LANGUAGE' }
     ,
-    {
-
-        que: "2. Inside which HTML element do we put the JavaScript?",
-        a: "scripting",
-        b: "javascript",
-        c: "script",
-        d: "js",
-        ans: "script"
-    },
-
-    {
-
-        que: "3. JavaScript File Has An Extension of:",
-        a: ".js",
-        b: ".java",
-        c: ".javascript",
-        d: "None of the above",
-        ans: ".js"
-
-    },
-    {
-
-        que: "4. Which built-in method returns the characters in a string beginning at the specified location?",
-        a: "substr()",
-        b: "getSubstring()",
-        c: "slice()",
-        d: "None of the above",
-        ans: "slice()"
-
-    },
-
-    {
-
-        que: "5. Which of the following function of Number object returns a string value version of the current number?",
-        a: "toString()",
-        b: "toFixed()",
-        c: "toLocaleString()",
-        d: "toPrecision()",
-        ans: "toFixed()"
-
-    },
-    {
-
-        que: "6. Which of the following function of String object splits a String object into an array of strings by separating the string into substrings?",
-        a: "slice()",
-        b: "split()",
-        c: "replace()",
-        d: "search()",
-        ans: "split()"
-
-    },
-    {
-
-        que: "7.Which of the following function of String object creates an HTML anchor that is used as a hypertext target?",
-        a: "anchor()",
-        b: "link()",
-        c: "blink()",
-        d: "big()",
-        ans: "blink()"
-
-    },
-    {
-
-        que: "8.  Which of the following function of String object causes a string to be displayed as a superscript, as if it were in a <sup> tag?",
-        a: "sup()",
-        b: "small()",
-        c: "strike()",
-        d: "sub()",
-        ans: "sup()"
-
-    },
-    {
-
-        que: "9. Which of the following function of Array object returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found?",
-        a: "indexOf()",
-        b: "join()",
-        c: "lastIndexOf()",
-        d: "map()",
-        ans: "indexOf()"
-
-    },
-    {
-
-        que: "10. Which of the following function of Array object sorts the elements of an array?",
-        a: "toSource()",
-        b: "sort()",
-        c: "toString()",
-        d: "unshift()",
-        ans: "sort()"
-
-    },
 
 
+    { que: 'Choose the correct HTML element to define important text', opt1: 'STRONG', opt2: 'I', opt3: 'B', opt4: 'IMPORTANT', ans: 'IMPORTANT' },
 
 ]
 
 
-var questionGenerate = document.getElementById("questiongenerate");
-
-var a = document.getElementById("a_text");
-var b = document.getElementById("b_text");
-var c = document.getElementById("c_text");
-var d = document.getElementById("d_text");
-var index = 0;
-var score = 0;
 
 
-function load() {
-    var data = quetionList[index]
-    questionGenerate.innerText = `${data.que}`;
-    a_text.innerText = `${data.a}`;
-    b_text.innerText = `${data.b}`;
-    c_text.innerText = `${data.c}`;
-    d_text.innerText = `${data.d}`;
+var questionCount = 0
+var score = 0
+
+
+
+var label1 = document.querySelector('#val1')
+var label2 = document.querySelector('#val2')
+var label3 = document.querySelector('#val3')
+var label4 = document.querySelector('#val4')
+
+var opt1 = document.querySelector('#option1')
+var opt2 = document.querySelector('#option2')
+var opt3 = document.querySelector('#option3')
+var opt4 = document.querySelector('#option4')
+
+var quizWindow = document.querySelector('#quizWindow')
+
+var resultWindow = document.querySelector('#result')
+
+var question = document.querySelector('#question')
+
+var announce = document.querySelector('#announce')
+
+
+var totalQueCount = document.querySelector('#totalQueCount')
+
+var correctQueCount = document.querySelector('#correctQueCount')
+
+var answers = document.getElementsByClassName('optionsCheck')
+
+
+function renderQuestion() {
+    question.innerHTML = htmlQuiz[questionCount].que
+
+    label1.innerHTML = htmlQuiz[questionCount].opt1
+    label2.innerHTML = htmlQuiz[questionCount].opt2
+    label3.innerHTML = htmlQuiz[questionCount].opt3
+    label4.innerHTML = htmlQuiz[questionCount].opt4
+
+    opt1.value = htmlQuiz[questionCount].opt1
+    opt2.value = htmlQuiz[questionCount].opt2
+    opt3.value = htmlQuiz[questionCount].opt3
+    opt4.value = htmlQuiz[questionCount].opt4
+
+}
+
+
+
+
+
+function deSelect() {
+    for (var i = 0; i < answers.length; i++) {
+        answers[i].checked = false
+    }
+}
+
+function next() {
+    var checkedAns = false
+    for (var i = 0; i < answers.length; i++) {
+        // console.log(answers[i].value)
+        // console.log(answers[i].checked)
+        if (answers[i].checked) {
+            checkedAns = true
+            if (answers[i].value === htmlQuiz[questionCount].ans) {
+                score++
+            }
+        }
+    }
+
+
+
+    if (!checkedAns) {
+        alert('Please Select Any Option')
+    } else {
+        if (questionCount < htmlQuiz.length - 1) {
+            questionCount++
+            deSelect()
+            renderQuestion()
+        } else {
+            showResult()
+        }
+    }
 
 
 }
 
-var optName = document.getElementsByName("option");
+function showResult() {
+    console.log('your score is ' + score)
+    quizWindow.style.display = 'none'
+    resultWindow.style.display = 'flex'
+    totalQueCount.innerHTML = htmlQuiz.length
+    correctQueCount.innerHTML = score
 
+    var percentage = Math.floor((score / htmlQuiz.length) * 100)
 
-load()
-function submit() {
-    index++;
-    load()
-
-    for (var i = 0; i < optName.length; i++) {
-
-        optName[i].checked = false;
+    if (percentage < 70) {
+        announce.innerHTML = 'You have Failed'
+        announce.style.color = "red";
+    } else {
+        announce.innerHTML = 'You Passed';
+        announce.style.color = "green";
 
     }
 
 
 
-
 }
+window.onload = renderQuestion()
+
+
 var hero = document.getElementById("hero")
 var courselist1 = document.getElementById("courselist1")
 function join1() {
@@ -346,7 +323,7 @@ var pass = document.getElementById("pass");
 function startquiz() {
 
     if (pass.value == "123") {
-        quiz.style.display = "flex";
+        quizWindow.style.display = "flex";
         keySec.style.display = "none";
     }
     else if (pass.value == "") {

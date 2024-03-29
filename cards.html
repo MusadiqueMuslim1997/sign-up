@@ -77,42 +77,54 @@
     </section>
 
 
-    <section class="main" id="quiz">
+    <section class="main" id="quizWindow">
 
         <div class="box">
             <div class="header">
                 <h1>Js Quiz</h1>
             </div>
             <div class="que">
-                <h2 id="questiongenerate">1. This is the dummy question</h2>
+                <h2 id="question">1. This is the dummy question</h2>
             </div>
             <div class="opt">
 
 
-                <input id="a" type="radio" name="option" class="op">
-                <label for="a" id="a_text"></label><br />
-            </div>
+                <input id="option1" type="radio" name="quizOption" class="optionsCheck">
+                <label for="option1" id="val1"></label><br />
+            </div> 
             <div class="opt">
-                <input id="b" type="radio" name="option" class="op">
-                <label for="b" id="b_text"> </label>
+                <input id="option2" type="radio" name="quizOption" class="optionsCheck">
+                <label for="option2" id="val2"> </label>
             </div>
             <div class="opt">
 
-                <input id="c" type="radio" name="option" class="op">
-                <label for="c" id="c_text"> </label>
+                <input id="option3" type="radio" name="quizOption" class="optionsCheck">
+                <label for="option3" id="val3"> </label>
             </div>
             <div class="opt">
-                <input id="d" type="radio" name="option" class="op">
-                <label for="d" id="d_text"></label>
+                <input id="option4" type="radio" name="quizOption" class="optionsCheck">
+                <label for="option4" id="val4"></label>
 
 
 
             </div>
             <div class="btn"></div>
-            <button class="btns" onclick="submit()">Submit</button>
+            <button class="btns" onclick="next()">Submit</button>
         </div>
         </div>
 
+    </section>
+
+
+
+    <section class="resultSec" id="result">
+        <div class="result-card">
+            <div class="result-head">Result</div>
+            <div class="result-icn"><i class="fa-solid fa-square-poll-vertical"></i></div>
+            <div class="result-head" id="announce"></div>
+            <div class="result-obt" id="correctQueCount"></div>
+            <div class="result-tm" id="totalQueCount"></div>
+        </div>
     </section>
 
 
