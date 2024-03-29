@@ -485,7 +485,7 @@ button:active {
 }
 .result-card{
     width: 350px;
-    height: 350px;
+  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -497,6 +497,7 @@ button:active {
     border-radius: 10px;
     border: 0.5px solid white;
     padding: 30px 5px;
+
     
   
   
@@ -507,6 +508,18 @@ button:active {
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: white;
+   
+
+}
+.result-heads{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
     font-weight: bolder;
     font-family: sans-serif;
     color: white;
@@ -528,7 +541,7 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2rem;
+    font-size: 1rem;
     font-weight: bolder;
     color: white;
    
@@ -539,9 +552,9 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2rem;
+    font-size: 1rem;
     font-weight: bolder;
     color: white;
-    margin-bottom: 10px;
+  
   
 }

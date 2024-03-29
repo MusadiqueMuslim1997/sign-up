@@ -19,13 +19,13 @@ function sign() {
     var fn = document.getElementById("fn").value;
 
     if (password === repeat && password !== "" && repeat !== "" && fn !== "" && em !== "") {
-       
+
         localStorage.setItem("user", JSON.stringify({ email: em, password: password }));
         window.location.assign("login.html");
-    } else if(password != repeat){
+    } else if (password != repeat) {
         swal("Password not match");
-    } 
-    else{
+    }
+    else {
         swal("Please Fill Input");
     }
 }
@@ -34,12 +34,12 @@ function login() {
     var loginEmail = document.getElementById("login-mail").value;
     var loginPassword = document.getElementById("login-password").value;
 
-   
+
     var userData = JSON.parse(localStorage.getItem("user"));
     if (userData && userData.email === loginEmail && userData.password === loginPassword) {
-       
+
         window.location.assign("cards.html");
-        
+
     } else {
         swal("Invalid Candidate");
     }
@@ -48,13 +48,31 @@ function login() {
 
 var htmlQuiz = [
 
-    { que: 'Who is making the Web standards?    ', opt1: 'GOOGLE', opt2: 'MICROSOFT', opt3: 'MOZILLA', opt4: 'WORLD WIDE WEB', ans: 'WORLD WIDE WEB' },
+    {
+        que: '1. Who is making the Web standards?',
+        opt1: 'GOOGLE',
+        opt2: 'MICROSOFT',
+        opt3: 'MOZILLA', opt4: 'WORLD WIDE WEB',
+        ans: 'WORLD WIDE WEB'
+    },
 
-    { que: 'What is the abbreviation of HTML', opt1: 'HYPER TEXT MARKUP LANGUAGE', opt2: 'HYPER INFO MARKUP LANGUAGE', opt3: 'HYPER TEND MARK LANGUAGE', opt4: 'HYPER TEST MARKS LANGUAGE', ans: 'HYPER TEXT MARKUP LANGUAGE' }
+    {
+        que: '2. What is the abbreviation of HTML',
+        opt1: 'HYPER TEXT MARKUP LANGUAGE',
+        opt2: 'HYPER INFO MARKUP LANGUAGE',
+        opt3: 'HYPER TEND MARK LANGUAGE', opt4: 'HYPER TEST MARKS LANGUAGE',
+        ans: 'HYPER TEXT MARKUP LANGUAGE'
+    }
     ,
 
 
-    { que: 'Choose the correct HTML element to define important text', opt1: 'STRONG', opt2: 'I', opt3: 'B', opt4: 'IMPORTANT', ans: 'IMPORTANT' },
+    {
+        que: '3. Choose the correct HTML element to define important text',
+        opt1: 'STRONG',
+        opt2: 'I', opt3: 'B',
+        opt4: 'IMPORTANT',
+        ans: 'IMPORTANT'
+    },
 
 ]
 
@@ -133,7 +151,7 @@ function next() {
 
 
     if (!checkedAns) {
-        alert('Please Select Any Option')
+        swal('Please Select Any Option')
     } else {
         if (questionCount < htmlQuiz.length - 1) {
             questionCount++
