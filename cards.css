@@ -520,6 +520,7 @@ button:active {
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    text-shadow: 1px 1px silver;
     font-weight: bolder;
     font-family: sans-serif;
     color: white;
