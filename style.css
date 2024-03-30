@@ -182,9 +182,12 @@ button:active {
 
 @media screen and (max-width:450px) {
     .header {
-        height: 60px;
-        font-size: 2.2rem;
-        padding-left: 30PX;
+      padding: 10px 30px;
+    }
+    .footer{
+        font-size: 0.6rem;
+        padding: 10px 20px;
+        text-align: center;
     }
 
     .sign-up {
