@@ -79,9 +79,7 @@ a {
   
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
+    
   
 }
 
