@@ -6,8 +6,14 @@
 }
 
 body {
-    background-color: black;
+    background-image: url("images/abcd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+
 
 .header {
     width: 100%;
@@ -19,8 +25,9 @@ body {
     position: fixed;
     top: 0;
     z-index: 1;
-    background: black;
-    border-bottom: 2px solid darkblue;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+
+
     text-shadow: 2px 2px silver;
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -75,8 +82,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0px 100px;
-    background-color: black;
-    border-top: 2px solid darkblue;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
     font-size: 0.8rem;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -97,7 +103,8 @@ a {
     gap: 20px;
     background: transparent;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: 2px solid darkblue;
+    border-radius: 10px;
+    /* border: 1px solid darkblue; */
 
 }
 
@@ -123,8 +130,13 @@ a {
     border-left: none;
     border-radius: 5px;
     padding: 5px 10px;
-    background-color: black;
+    background-color: transparent;
     color: silver;
+}
+
+.inps>input::placeholder {
+    color: #dbdada;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .icn {
@@ -135,7 +147,7 @@ a {
 input:focus {
     border-bottom: 1px solid darkblue;
     outline: darkblue;
-    background-color: black;
+
 
 }
 
@@ -154,7 +166,8 @@ button {
     font-weight: bolder;
     cursor: pointer;
 }
-.bt{
+
+.bt {
     width: 100px;
     height: 30px;
     border: 1px solid darkblue;
@@ -169,10 +182,12 @@ button {
     font-weight: bolder;
     cursor: pointer;
 }
-.bt:active{
+
+.bt:active {
     background-color: #000072;
     border: none;
 }
+
 button:active {
     background-color: green;
 }
