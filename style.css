@@ -92,7 +92,6 @@ a {
 
 .form {
     width: 400px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +139,7 @@ a {
 .icn {
     font-size: 20px;
     color: darkblue;
+    text-shadow: 1px 1px silver;
 }
 
 input:focus {
