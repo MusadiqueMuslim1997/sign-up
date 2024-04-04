@@ -26,9 +26,6 @@ body {
     top: 0;
     z-index: 1;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
-
-
-    text-shadow: 2px 2px silver;
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -40,7 +37,8 @@ a {
 .heads>h4 {
     color: white;
     font-size: 1.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: cursive;
+    text-shadow: 1px 1px silver;
 }
 
 .heads {
@@ -85,7 +83,7 @@ a {
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
     font-size: 0.8rem;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: cursive;
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
