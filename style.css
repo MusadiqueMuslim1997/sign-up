@@ -60,6 +60,7 @@ a {
 .sign-up {
     width: 100%;
     margin-top: 80px;
+    margin-bottom: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +88,9 @@ a {
     font-family: cursive;
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
 
 }
