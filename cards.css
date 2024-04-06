@@ -191,6 +191,7 @@ header {
 .main {
     width: 100%;
     margin-top: 80px;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,6 +331,7 @@ button:active {
 
 .join-1 {
     width: 100%;
+    height: 80vh;
     margin-top: 80px;
     display: flex;
     align-items: center;
@@ -424,13 +426,22 @@ button:active {
 .key {
     width: 100%;
     margin-top: 80px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    gap: 20px;
+    display: none;
+}
+
+.keyss {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 40px;
-    gap: 20px;
-    display: none;
+    gap: 30px;
 }
 
 .key-title {
