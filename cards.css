@@ -237,7 +237,6 @@ header {
 
 .opt {
     width: 100%;
-
     margin-top: 40px;
 
 
@@ -295,6 +294,7 @@ button:active {
 @media screen and (max-width:450px) {
     .box {
         width: 380px;
+        
     }
 
     .cards {
@@ -305,7 +305,10 @@ button:active {
 @media screen and (max-width:400px) {
     .box {
         width: 330px;
-
+       
+    }
+    .opt{
+        margin-top: 15px;
     }
 
     header {
