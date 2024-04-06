@@ -79,7 +79,7 @@ header {
     flex-wrap: wrap;
     padding: 40px;
     gap: 20px;
-    display: none;
+    /* display: none; */
 }
 
 .hi {
@@ -490,7 +490,7 @@ button:active {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* display: none; */
+    display: none;
 }
 
 .result-card {
@@ -581,7 +581,7 @@ button:active {
     justify-content: center;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
     font-size: 0.8rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: cursive;
     color: white;
     font-weight: bolder;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
