@@ -169,6 +169,8 @@ var correctQueCount = document.querySelector('#correctQueCount')
 
 var answers = document.getElementsByClassName('optionsCheck')
 
+var per = document.getElementById("per");
+
 
 function renderQuestion() {
     question.innerHTML = htmlQuiz[questionCount].que
@@ -233,13 +235,15 @@ function showResult() {
     correctQueCount.innerHTML = score
 
     var percentage = Math.floor((score / htmlQuiz.length) * 100)
-
+    per.innerHTML = percentage + "%";
     if (percentage < 70) {
         announce.innerHTML = 'You have Failed'
         announce.style.color = "red";
+        per.style.color = "red"
     } else {
         announce.innerHTML = 'You Passed';
         announce.style.color = "green";
+        per.style.color = "green"
 
     }
 
