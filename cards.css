@@ -545,12 +545,11 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-shadow: 1px 1px silver;
     font-weight: bolder;
     font-family: sans-serif;
-    color: white;
-
+   
 
 }
 
@@ -595,8 +594,9 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bolder;
+    text-shadow: 1px 1px silver;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }

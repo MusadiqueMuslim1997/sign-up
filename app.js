@@ -241,7 +241,7 @@ function showResult() {
         announce.style.color = "red";
         per.style.color = "red"
     } else {
-        announce.innerHTML = 'You Passed';
+        announce.innerHTML = 'You have Passed';
         announce.style.color = "green";
         per.style.color = "green"
 
