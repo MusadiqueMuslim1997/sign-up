@@ -20,7 +20,7 @@ function sign() {
 
     if (password === repeat && password !== "" && repeat !== "" && fn !== "" && em !== "") {
 
-        localStorage.setItem("user", JSON.stringify({ email: em, password: password }));
+        localStorage.setItem("user", JSON.stringify({firstName : fn, email: em, password: password }));
         window.location.assign("login.html");
     } else if (password != repeat) {
         swal("Password not match");
@@ -44,8 +44,11 @@ function login() {
         swal("Invalid Candidate");
     }
 }
-
-
+var userData = JSON.parse(localStorage.getItem("user"));
+var userNAme = document.getElementById("username");
+userNAme.innerHTML = userData.firstName
+var title = document.getElementById("title");
+title.innerHTML = userData.firstName
 var htmlQuiz = [
 
     {
