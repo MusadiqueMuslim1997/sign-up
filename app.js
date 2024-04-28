@@ -174,6 +174,7 @@ var answers = document.getElementsByClassName('optionsCheck')
 
 var per = document.getElementById("per");
 
+var resultTitle = document.getElementById("result-title");
 
 function renderQuestion() {
     question.innerHTML = htmlQuiz[questionCount].que
@@ -240,10 +241,14 @@ function showResult() {
     var percentage = Math.floor((score / htmlQuiz.length) * 100)
     per.innerHTML = percentage + "%";
     if (percentage < 70) {
-        announce.innerHTML = 'You have Failed'
+        resultTitle.innerHTML = "Sorry" + `<br />` + "😭"
+        resultTitle.style.color = "red";
+        announce.innerHTML = 'You have Failed';
         announce.style.color = "red";
         per.style.color = "red"
     } else {
+        resultTitle.innerHTML = "Congratulation" + `<br />` +" 👏";
+        resultTitle.style.color = "green";
         announce.innerHTML = 'You have Passed';
         announce.style.color = "green";
         per.style.color = "green"
