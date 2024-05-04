@@ -250,7 +250,7 @@ function showResult() {
         resultTitle.style.color = "red";
         announce.innerHTML = 'You have Failed';
         tit.innerHTML = userData.firstName
-        tit.style.color = "green"
+        tit.style.color = "#0d6db7"
         announce.style.color = "red";
         per.style.color = "red"
     } else {
@@ -258,7 +258,7 @@ function showResult() {
         resultTitle.style.color = "green";
         announce.innerHTML = 'You have Passed';
         tit.innerHTML = userData.firstName
-        tit.style.color = "green"
+        tit.style.color = "#0d6db7"
         announce.style.color = "green";
         per.style.color = "green"
 
