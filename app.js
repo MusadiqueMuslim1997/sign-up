@@ -47,9 +47,9 @@ function login() {
 }
 var userData = JSON.parse(localStorage.getItem("user"));
 var userNAme = document.getElementById("username");
-userNAme.innerHTML = userData.firstName
+userNAme.innerHTML = userData.firstName + " 👋";
 var title = document.getElementById("title");
-title.innerHTML = userData.firstName
+title.innerHTML = userData.firstName 
 var tit = document.getElementById("tit")
 
 var htmlQuiz = [
