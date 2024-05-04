@@ -20,7 +20,7 @@ function sign() {
 
     if (password === repeat && password !== "" && repeat !== "" && fn !== "" && em !== "") {
 
-        localStorage.setItem("user", JSON.stringify({firstName : fn, email: em, password: password }));
+        localStorage.setItem("user", JSON.stringify({ firstName: fn, email: em, password: password }));
         window.location.assign("login.html");
     } else if (password != repeat) {
         swal("Password not match");
@@ -37,8 +37,9 @@ function login() {
 
     var userData = JSON.parse(localStorage.getItem("user"));
     if (userData && userData.email === loginEmail && userData.password === loginPassword) {
-
+        swal("Login Successfully");
         window.location.assign("cards.html");
+
 
     } else {
         swal("Invalid Candidate");
@@ -49,6 +50,8 @@ var userNAme = document.getElementById("username");
 userNAme.innerHTML = userData.firstName
 var title = document.getElementById("title");
 title.innerHTML = userData.firstName
+var tit = document.getElementById("tit")
+
 var htmlQuiz = [
 
     {
@@ -176,6 +179,8 @@ var per = document.getElementById("per");
 
 var resultTitle = document.getElementById("result-title");
 
+
+
 function renderQuestion() {
     question.innerHTML = htmlQuiz[questionCount].que
 
@@ -237,19 +242,23 @@ function showResult() {
     resultWindow.style.display = 'flex'
     totalQueCount.innerHTML = htmlQuiz.length
     correctQueCount.innerHTML = score
-
+    tit.innerHTML = userData.firstName
     var percentage = Math.floor((score / htmlQuiz.length) * 100)
     per.innerHTML = percentage + "%";
     if (percentage < 70) {
-        resultTitle.innerHTML = "Sorry" + `<br />` + "😭"
+        resultTitle.innerHTML = "Sorry" + `<br />` + "🥺"
         resultTitle.style.color = "red";
         announce.innerHTML = 'You have Failed';
+        tit.innerHTML = userData.firstName
+        tit.style.color = "green"
         announce.style.color = "red";
         per.style.color = "red"
     } else {
-        resultTitle.innerHTML = "Congratulation" + `<br />` +" 👏";
+        resultTitle.innerHTML = "Congratulation" + `<br />` + " 👏";
         resultTitle.style.color = "green";
         announce.innerHTML = 'You have Passed';
+        tit.innerHTML = userData.firstName
+        tit.style.color = "green"
         announce.style.color = "green";
         per.style.color = "green"
 
