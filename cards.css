@@ -90,7 +90,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 0px;
+    padding: 20px 15px;
 }
 
 .hi-1 {
@@ -667,5 +667,11 @@ button:active {
     .footer {
         font-size: 0.6rem;
         padding: 10px;
+    }
+    .hi-1{
+        font-size: 1.6rem;
+    }
+    .hi-img{
+        width: 30%;
     }
 }
