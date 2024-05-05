@@ -24,6 +24,7 @@ function sign() {
         window.location.assign("login.html");
     } else if (password != repeat) {
         swal("Password not match");
+        
     }
     else {
         swal("Please Fill Input");
@@ -37,12 +38,22 @@ function login() {
 
     var userData = JSON.parse(localStorage.getItem("user"));
     if (userData && userData.email === loginEmail && userData.password === loginPassword) {
-        swal("Login Successfully");
+        swal({
+            title: "Congratulation!",
+            text: "You are Login Successfully!",
+            icon: "success",
+          });
         window.location.assign("cards.html");
+       
 
 
     } else {
-        swal("Invalid Candidate");
+        swal({
+            title: "Error!",
+            text: "Invalid Candidate!",
+            icon: "error",
+          });
+          
     }
 }
 var userData = JSON.parse(localStorage.getItem("user"));
