@@ -79,7 +79,7 @@ header {
     flex-wrap: wrap;
     padding: 40px;
     gap: 20px;
-    /* display: none; */
+    display: none;
 }
 
 .hi {
@@ -208,9 +208,28 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    display: none;
+    /* display: none; */
 }
+.timer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 
+    
+}
+.time{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: green;
+}
 .box {
     width: 100%;
     display: flex;
@@ -354,6 +373,12 @@ button:active {
 
     label {
         font-size: 0.8rem;
+    }
+    .time{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        font-size: 1rem;
     }
 }
 

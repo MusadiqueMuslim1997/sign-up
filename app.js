@@ -63,6 +63,7 @@ var title = document.getElementById("title");
 title.innerHTML = userData.firstName 
 var tit = document.getElementById("tit")
 
+
 var htmlQuiz = [
 
     {
@@ -189,7 +190,8 @@ var answers = document.getElementsByClassName('optionsCheck')
 var per = document.getElementById("per");
 
 var resultTitle = document.getElementById("result-title");
-
+let timerElement = document.getElementById('time');
+let timeLeft = 300;
 
 
 function renderQuestion() {
@@ -278,7 +280,25 @@ function showResult() {
 
 
 }
-window.onload = renderQuestion()
+function startTimer() {
+    let timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            showResult();
+        } else {
+            timeLeft--;
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes} : ${seconds}`;
+        }
+    }, 1000);
+}
+
+window.onload = () => {
+    renderQuestion();
+    startTimer();
+};
+
 
 
 var hero = document.getElementById("hero")
