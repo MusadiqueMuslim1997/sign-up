@@ -24,7 +24,7 @@ function sign() {
         window.location.assign("login.html");
     } else if (password != repeat) {
         swal("Password not match");
-        
+
     }
     else {
         swal("Please Fill Input");
@@ -42,9 +42,9 @@ function login() {
             title: "Congratulation!",
             text: "You are Login Successfully!",
             icon: "success",
-          });
+        });
         window.location.assign("cards.html");
-       
+
 
 
     } else {
@@ -52,15 +52,15 @@ function login() {
             title: "Error!",
             text: "Invalid Candidate!",
             icon: "error",
-          });
-          
+        });
+
     }
 }
 var userData = JSON.parse(localStorage.getItem("user"));
 var userNAme = document.getElementById("username");
 userNAme.innerHTML = userData.firstName + " 👋";
 var title = document.getElementById("title");
-title.innerHTML = userData.firstName 
+title.innerHTML = userData.firstName
 var tit = document.getElementById("tit")
 
 
@@ -295,9 +295,9 @@ function startTimer() {
 }
 
 window.onload = () => {
-    
+
     renderQuestion();
-   
+
 };
 
 
