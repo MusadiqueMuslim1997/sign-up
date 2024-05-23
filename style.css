@@ -448,15 +448,7 @@ header {
     padding: 20px;
     display: none;
 }
-.timer{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding: 20px;
-    background-color: #0d6db7;
-    font-size: 3rem;
-}
+
 .box {
     width: 500px;
     display: flex;
