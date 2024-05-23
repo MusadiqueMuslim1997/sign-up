@@ -209,7 +209,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    /* display: none; */
+    display: none;
 }
 
 .timer {

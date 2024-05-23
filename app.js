@@ -295,8 +295,9 @@ function startTimer() {
 }
 
 window.onload = () => {
+    
     renderQuestion();
-    startTimer();
+   
 };
 
 
@@ -454,6 +455,7 @@ function startquiz() {
 
     if (pass.value == "123") {
         quizWindow.style.display = "flex";
+        startTimer();
         keySec.style.display = "none";
     }
     else if (pass.value == "") {
