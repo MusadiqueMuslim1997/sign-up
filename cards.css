@@ -584,7 +584,7 @@ button:active {
 }
 
 .result-card {
-    width: 100%;
+    width: 380px;
 
     display: flex;
     align-items: center;
